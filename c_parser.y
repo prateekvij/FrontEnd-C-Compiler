@@ -7,7 +7,7 @@
 
 	extern char* yytext;
 	extern int yyleng;
-	void yyerror(char*);
+	void yyerror(const char* s);
 	int yylex(void);
 	#define YYDEBUG 1
 	// #define YYSTYPE container
@@ -827,7 +827,7 @@ int main() {
 }
 
 
-void yyerror (char *s) {fprintf (stderr, "%s\n\n", s);}
+void yyerror (const char *s) {fprintf (stderr, "%s\n\n", s);}
 
 string newTemp(string type) {	
 	tempList[temp_num++] = type;
